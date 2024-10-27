@@ -1,0 +1,7 @@
+<div *ngIf="teacher">
+  <img [src]="teacher.photo" alt="{{ teacher.name }}">
+  <h2>{{ teacher.name }}</h2>
+  <p>Учёная степень: {{ teacher.degree }}</p>
+  <p>Общий стаж: {{ teacher.experience }}</p>
+  <button routerLink="/">Вернуться на главную</button>
+</div>

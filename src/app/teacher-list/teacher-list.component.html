@@ -1,0 +1,14 @@
+<div class="header">
+  <h1>Список сотрудников КГУ</h1>
+  <p>Узнайте больше о преподавателях нашего университета</p>
+  <input type="text" placeholder="Введите имя сотрудника" [(ngModel)]="searchQuery" (input)="filterTeachers()"/>
+</div>
+
+<div class="card-container">
+  <div *ngFor="let teacher of filteredTeachers" class="card">
+    <img [src]="teacher.photo" alt="{{ teacher.name }}">
+    <h2>{{ teacher.name }}</h2>
+    <p>{{ teacher.position }}</p>
+    <button [routerLink]="['/teacher', teacher.id]">Подробнее</button>
+  </div>
+</div>
